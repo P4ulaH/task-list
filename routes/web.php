@@ -65,9 +65,9 @@ Route::put('/tasks/{task}/toggle-complete', function (Task $task) {
   $task->toggleComplete();
 
   // Flash success message to the session
-  return redirect()->back()->with('success', 'Task completed successfully.');
+  return redirect()->back()->with('success', 'Task status changed successfully.');
 })->name('tasks.toggle-complete');
 
 Route::fallback(function () {
-  return 'Still got somewhere!';
+  return 'Invalid web link';
 });

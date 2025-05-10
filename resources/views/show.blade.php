@@ -3,15 +3,15 @@
 @section('title', $task->title)
 
 @section('content')
-    <div class="mb-4">
+    <div class="my-10">
         <a href="{{ route('tasks.index') }}" 
             class="link"><- Go back to the task list</a>
     </div>
 
-    <p class="mb-4 text-slate-700">{{ $task->description }}</p>
+    <p class="mb-4 text-slate-700 dark:text-zinc-100">{{ $task->description }}</p>
 
     @if($task->long_description)
-        <p class="mb-4 text-slate-700">{{ $task->long_description }}</p>
+        <p class="mb-4 text-slate-700 dark:text-zinc-100">{{ $task->long_description }}</p>
     @endif
 
     <p class="mb-4 text-sm text-slate-500">Created: {{ $task->created_at->diffForHumans()}} • Updated: {{ $task->updated_at->diffForHumans() }}</p>

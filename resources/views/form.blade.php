@@ -49,7 +49,7 @@
           Add Task
         @endisset
       </button>
-      <a href="{{ route('tasks.index') }}" class="link">Cancel</a>
+      <a href="{{ route('tasks.index') }}" class="btn">Cancel</a>
     </div>
   </form>
 @endsection
